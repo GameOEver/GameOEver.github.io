@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Kontakt</h1>
+    </header>
+
+    <main>
+        <h2>Schreiben Sie uns</h2>
+        <form action="submit_form.php" method="post">
+            <label for="name">Ihr Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Ihre E-Mail-Adresse:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Betreff:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Ihre Nachricht:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="submit" value="Nachricht senden">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CNC Fräsen | Alle Rechte vorbehalten</p>
+    </footer>
+
+</body>
+</html>
 
